@@ -19,9 +19,16 @@ Busca `data-target` y cambia el valor. Por ejemplo:
 
 Valores actuales (cámbialos por los reales):
 - Años de experiencia: **35**
-- Kilos lavados: **500,000+**
+- Kilos lavados (histórico): **500,000+**
 - Clientes: **12,000+**
 - Empresas aliadas: **80+**
+
+Y en el bloque "Lo que procesamos cada mes" (capacidad mensual):
+- Toneladas de ropa: **35**
+- Frazadas lavadas: **12,000**
+- Sábanas lavadas: **6,300**
+- Overoles industriales: **4,500**
+- Edredones lavados: **3,800**
 
 ### 2. WhatsApp y teléfono
 En la sección de contacto, reemplaza `000000000000` por tu número con código de país (sin signos ni espacios), por ejemplo `521234567890`:

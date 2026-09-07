@@ -179,9 +179,11 @@ h1, h2, h3 {
 .industrias__stats-title {
   text-align: center; font-size: clamp(1.3rem, 3vw, 1.7rem); margin-bottom: 2rem;
 }
+.industrias__stats-title--sub { margin-top: 3.5rem; }
 .stats__grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
 }
+.stats__grid--capacity { grid-template-columns: repeat(5, 1fr); }
 .stat {
   background: var(--surface);
   border: 1px solid var(--border); border-radius: var(--radius);
