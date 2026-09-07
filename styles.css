@@ -159,13 +159,6 @@ h1, h2, h3 {
   max-width: 760px; width: 100%; margin: 0 auto;
   text-align: center;
 }
-.eyebrow {
-  display: inline-flex; align-items: center; gap: .6rem;
-  font-family: "JetBrains Mono", monospace; font-weight: 500;
-  letter-spacing: .1em; text-transform: uppercase; font-size: .78rem;
-  color: var(--pastel-blue-text); margin-bottom: 1.1rem;
-}
-.eyebrow::before { content: ""; display: inline-block; width: 22px; height: 1.5px; background: currentColor; }
 .hero__title {
   font-size: clamp(2.6rem, 6vw, 4.4rem);
   margin-bottom: 1.3rem;
@@ -291,7 +284,7 @@ h1, h2, h3 {
 .ind-tab.is-active { color: var(--ink); border-bottom-color: var(--brand-red); }
 
 .ind-panel__grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
 }
 .ind-group {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
@@ -344,7 +337,6 @@ h1, h2, h3 {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: clamp(2.5rem, 6vw, 4rem) 1.5rem; color: var(--ink-soft);
 }
-.cta__box .eyebrow { justify-content: center; }
 .cta__box h2 { font-size: clamp(1.9rem, 4.5vw, 2.7rem); margin-bottom: .7rem; }
 .cta__box p { font-family: "Manrope", sans-serif; font-size: 1.08rem; color: var(--muted); max-width: 520px; margin: 0 auto 1.8rem; }
 .cta__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
