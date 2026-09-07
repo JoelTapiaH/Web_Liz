@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lavandería Liz · 35 años cuidando tu ropa</title>
+  <meta name="description" content="Lavandería Liz: 35 años de experiencia desde 1991. Miles de familias y empresas confían en nosotros. Lavado profesional, elegante e impecable." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Outfit:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav__logo" aria-label="Lavandería Liz">
+      <img src="imagenes/logo.png" alt="Lavandería Liz" class="nav__logo-img" />
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#historia">Historia</a>
+      <a href="#numeros">Números</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#contacto" class="nav__cta">Cotizar ahora</a>
+    </nav>
+    <button class="nav__burger" id="navBurger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+    <div class="blob blob--3"></div>
+
+    <div class="hero__content reveal">
+      <span class="hero__badge">Desde 1991 · 35 años de excelencia</span>
+      <h1 class="hero__title">
+        El arte de cuidar<br />
+        <span class="grad-text">cada prenda</span>
+      </h1>
+      <p class="hero__sub">
+        Tres décadas y media perfeccionando un oficio. Familias y empresas
+        confían en Lavandería Liz por una ropa impecable, tratada con la
+        delicadeza y la precisión que solo dan los años.
+      </p>
+      <div class="hero__actions">
+        <a href="#contacto" class="btn btn--primary">Solicitar servicio</a>
+        <a href="#historia" class="btn btn--ghost">Nuestra historia →</a>
+      </div>
+    </div>
+
+    <!-- Sello conmemorativo 35 años -->
+    <div class="seal" aria-hidden="true">
+      <svg viewBox="0 0 200 200" class="seal__ring">
+        <defs>
+          <path id="sealPath" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" />
+        </defs>
+        <text>
+          <textPath href="#sealPath" startOffset="0">
+            LAVANDERÍA LIZ ★ DESDE 1991 ★ EXCELENCIA ★
+          </textPath>
+        </text>
+      </svg>
+      <div class="seal__center">
+        <span class="seal__num">35</span>
+        <span class="seal__label">Años</span>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span></span> Desliza
+    </div>
+  </section>
+
+  <!-- ===== STATS / CONTADORES ===== -->
+  <section class="stats" id="numeros">
+    <div class="stats__head reveal">
+      <h2>Los números hablan por nosotros</h2>
+      <p>Dos décadas de trabajo constante reflejadas en cada cifra.</p>
+    </div>
+    <div class="stats__grid">
+      <div class="stat reveal">
+        <div class="stat__num" data-target="35" data-suffix="">0</div>
+        <div class="stat__label">Años de experiencia</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num" data-target="500000" data-suffix="+">0</div>
+        <div class="stat__label">Kilos de ropa lavados</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num" data-target="12000" data-suffix="+">0</div>
+        <div class="stat__label">Clientes atendidos</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num" data-target="80" data-suffix="+">0</div>
+        <div class="stat__label">Empresas aliadas</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIAJE EN EL TIEMPO / HISTORIA CON FOTOS ===== -->
+  <section class="viaje" id="historia">
+    <div class="section-head reveal">
+      <span class="eyebrow">Nuestra historia en imágenes</span>
+      <h2>De aquellos inicios a la <span class="grad-text">lavandería de hoy</span></h2>
+      <p class="viaje__intro">Desliza y acompáñanos en el viaje: de las primeras lavadoras y los recuerdos en sepia, hasta los equipos modernos y el servicio que nos define hoy.</p>
+    </div>
+
+    <div class="viaje__line">
+
+      <!-- 1991 · nostálgico (sepia + polaroid) -->
+      <article class="era era--vintage reveal">
+        <div class="era__media">
+          <!-- Para usar tu foto real: reemplaza el bloque .photo-ph por:
+               <img src="imagenes/1991.jpg" alt="Lavandería Liz en 1991"> -->
+          <div class="photo-ph">
+            <span class="photo-ph__icon">📷</span>
+            <span class="photo-ph__txt">Foto de 1991</span>
+            <span class="photo-ph__hint">los primeros días</span>
+          </div>
+          <span class="era__tape era__tape--l"></span>
+          <span class="era__tape era__tape--r"></span>
+        </div>
+        <div class="era__text">
+          <span class="era__year">1991</span>
+          <h3>Donde todo empezó</h3>
+          <p>Una lavadora, una plancha y muchas ganas. Abrimos con la promesa de tratar cada prenda como propia. Aquellos primeros clientes hoy son familia.</p>
+        </div>
+      </article>
+
+      <!-- 2003 · transición -->
+      <article class="era era--retro reveal">
+        <div class="era__media">
+          <div class="photo-ph">
+            <span class="photo-ph__icon">🧺</span>
+            <span class="photo-ph__txt">Foto de 2003</span>
+            <span class="photo-ph__hint">creciendo con el barrio</span>
+          </div>
+          <span class="era__tape era__tape--l"></span>
+          <span class="era__tape era__tape--r"></span>
+        </div>
+        <div class="era__text">
+          <span class="era__year">2003</span>
+          <h3>Crecimos con la comunidad</h3>
+          <p>El boca a boca nos convirtió en la lavandería de confianza del barrio. Sumamos equipo, más máquinas y horarios extendidos para no fallarle a nadie.</p>
+        </div>
+      </article>
+
+      <!-- 2015 · más moderno -->
+      <article class="era era--modern reveal">
+        <div class="era__media">
+          <div class="photo-ph">
+            <span class="photo-ph__icon">🏢</span>
+            <span class="photo-ph__txt">Foto de 2015</span>
+            <span class="photo-ph__hint">alianzas empresariales</span>
+          </div>
+        </div>
+        <div class="era__text">
+          <span class="era__year">2015</span>
+          <h3>El salto a las empresas</h3>
+          <p>Hoteles, restaurantes y gimnasios empezaron a confiarnos su lencería y uniformes. Renovamos equipos para responder a un volumen cada vez mayor.</p>
+        </div>
+      </article>
+
+      <!-- HOY · full color, vibrante -->
+      <article class="era era--today reveal">
+        <div class="era__media">
+          <div class="photo-ph photo-ph--bright">
+            <span class="photo-ph__icon">✨</span>
+            <span class="photo-ph__txt">Foto actual</span>
+            <span class="photo-ph__hint">tu lavandería de hoy</span>
+          </div>
+        </div>
+        <div class="era__text">
+          <span class="era__year era__year--now">Hoy</span>
+          <h3>Innovación que se nota</h3>
+          <p>Equipos de última generación, procesos eco-amigables, recogida a domicilio y seguimiento de tu pedido. La misma calidad de siempre, ahora más rápida que nunca.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section class="servicios" id="servicios">
+    <div class="section-head reveal">
+      <span class="eyebrow">Lo que hacemos</span>
+      <h2>Servicios a tu medida</h2>
+    </div>
+    <div class="serv-grid">
+      <article class="serv-card reveal">
+        <div class="serv-card__icon">🧺</div>
+        <h3>Lavado por kilo</h3>
+        <p>Lavado, secado y doblado profesional. Pagas por lo que pesa, sin sorpresas.</p>
+      </article>
+      <article class="serv-card reveal">
+        <div class="serv-card__icon">👔</div>
+        <h3>Planchado y prendas finas</h3>
+        <p>Trajes, vestidos y prendas delicadas tratadas con el cuidado que merecen.</p>
+      </article>
+      <article class="serv-card reveal">
+        <div class="serv-card__icon">🚚</div>
+        <h3>Recogida a domicilio</h3>
+        <p>Pasamos por tu ropa y te la devolvemos lista. Tú no mueves un dedo.</p>
+      </article>
+      <article class="serv-card reveal">
+        <div class="serv-card__icon">🏢</div>
+        <h3>Servicio para empresas</h3>
+        <p>Convenios para hoteles, restaurantes y gimnasios con volumen y rapidez garantizados.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CLIENTES ===== -->
+  <section class="clientes" id="clientes">
+    <div class="section-head reveal">
+      <span class="eyebrow">Confían en nosotros</span>
+      <h2>Empresas y familias aliadas</h2>
+    </div>
+
+    <div class="logos reveal">
+      <div class="logo-chip">Hotel Aurora</div>
+      <div class="logo-chip">Restaurante La Mesa</div>
+      <div class="logo-chip">FitZone Gym</div>
+      <div class="logo-chip">Café Central</div>
+      <div class="logo-chip">Spa Bienestar</div>
+      <div class="logo-chip">Clínica Vida</div>
+    </div>
+
+    <div class="testi-grid">
+      <blockquote class="testi reveal">
+        <p>“Llevamos años con ellos para la lencería del hotel. Nunca un retraso, nunca una queja.”</p>
+        <footer><strong>María G.</strong> · Gerente, Hotel Aurora</footer>
+      </blockquote>
+      <blockquote class="testi reveal">
+        <p>“La recogida a domicilio me cambió la vida. Ropa impecable y entregada a tiempo.”</p>
+        <footer><strong>Carlos R.</strong> · Cliente desde 2015</footer>
+      </blockquote>
+      <blockquote class="testi reveal">
+        <p>“Profesionales de verdad. Tratan cada uniforme como si fuera suyo.”</p>
+        <footer><strong>Ana P.</strong> · FitZone Gym</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== CTA / CONTACTO ===== -->
+  <section class="cta" id="contacto">
+    <div class="cta__box reveal">
+      <h2>¿Listo para una ropa impecable?</h2>
+      <p>Escríbenos y recibe tu cotización hoy mismo. Atención rápida y cercana.</p>
+      <div class="cta__actions">
+        <a href="https://wa.me/000000000000" class="btn btn--primary" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
+        <a href="tel:+000000000000" class="btn btn--light">📞 Llamar ahora</a>
+      </div>
+      <p class="cta__note">Lun a Sáb · 8:00 a 19:00 · Recogida a domicilio disponible</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <img src="imagenes/logo.png" alt="Lavandería Liz" class="footer__logo" />
+    </div>
+    <p>35 años cuidando tu ropa como nadie. Desde 1991.</p>
+    <div class="footer__links">
+      <a href="#historia">Historia</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <small>© <span id="year"></span> Lavandería Liz. Todos los derechos reservados.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

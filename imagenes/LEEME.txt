@@ -1,0 +1,41 @@
+COLOCA AQUÍ TUS FOTOS Y EL LOGO
+================================
+
+>>> EL LOGO (IMPORTANTE) <<<
+Guarda la imagen del logo en esta carpeta con el nombre EXACTO:
+  logo.png
+Aparecerá automáticamente en la cabecera y el pie de página.
+(Mientras no exista, el sitio muestra el nombre en texto como respaldo.)
+Consejo: si el logo tiene fondo azul, una versión con fondo transparente (PNG)
+se verá aún mejor en la barra superior.
+
+---
+
+>>> IMAGEN DE FONDO DEL HERO (portada) <<<
+Guarda una foto horizontal y de buena calidad con el nombre EXACTO:
+  hero.jpg
+Aparecerá como fondo de la portada, con un velo oscuro encima para que el
+texto se lea bien. (Si no existe, queda el fondo azul noche por defecto.)
+Recomendado: imagen apaisada, mínimo 1920px de ancho. Buenas ideas: el
+interior del local, máquinas modernas, ropa doblada o un detalle de telas.
+
+---
+
+Sugerencia de nombres (así calzan con el ejemplo del index.html):
+  - 1991.jpg   -> la foto más antigua / nostálgica (los inicios)
+  - 2003.jpg   -> época de crecimiento
+  - 2015.jpg   -> alianzas con empresas
+  - hoy.jpg    -> foto actual del local / equipos modernos
+
+Cómo activarlas:
+En index.html, dentro de cada bloque <article class="era ...">, busca el
+bloque <div class="photo-ph"> ... </div> y reemplázalo por:
+
+  <img src="imagenes/1991.jpg" alt="Lavandería Liz en 1991">
+
+¡Eso es todo! El efecto nostálgico (sepia, marco tipo polaroid) se aplica
+automáticamente a las fotos más antiguas, y el color vibrante a las recientes.
+
+Consejos:
+- Formato: JPG o WebP. Tamaño recomendado: ~1200px de ancho.
+- Las fotos antiguas en blanco y negro o sepia lucen aún mejor con el diseño.
