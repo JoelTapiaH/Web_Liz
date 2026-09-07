@@ -7,7 +7,7 @@
   <meta name="description" content="Lavandería industrial y doméstica con 35 años de trayectoria. Lavado, planchado y logística textil confiable para familias, hoteles y empresas." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&family=Newsreader:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -31,6 +31,7 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="inicio">
+    <div class="hero__ambient" aria-hidden="true"></div>
     <div class="hero__grid">
       <div class="hero__content reveal">
         <span class="eyebrow">Lavandería industrial y doméstica</span>
@@ -227,11 +228,26 @@
     </div>
 
     <div class="logos reveal">
-      <div class="logo-chip"><img src="imagenes/Sedapall.jpg" alt="Sedapal" /></div>
-      <div class="logo-chip"><img src="imagenes/essalud-logo-png_seeklogo-205729.png" alt="EsSalud" /></div>
-      <div class="logo-chip"><img src="imagenes/Colegio_mayor_coar_logo.397416b4.png" alt="COAR · Colegios de Alto Rendimiento" /></div>
-      <div class="logo-chip"><img src="imagenes/contonga.76ade7f5.png" alt="Contonga Minería" /></div>
-      <div class="logo-chip"><img src="imagenes/logolincuna.png" alt="Compañía Minera Lincuna" /></div>
+      <div class="logo-chip">
+        <img src="imagenes/Sedapall.jpg" alt="Sedapal" />
+        <span class="tag tag--blue">Agua potable</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/essalud-logo-png_seeklogo-205729.png" alt="EsSalud" />
+        <span class="tag tag--green">Salud</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/Colegio_mayor_coar_logo.397416b4.png" alt="COAR · Colegios de Alto Rendimiento" />
+        <span class="tag tag--yellow">Educación</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/contonga.76ade7f5.png" alt="Contonga Minería" />
+        <span class="tag tag--red">Minería</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/logolincuna.png" alt="Compañía Minera Lincuna" />
+        <span class="tag tag--red">Minería</span>
+      </div>
     </div>
 
     <div class="testi-grid">
