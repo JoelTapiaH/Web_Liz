@@ -361,29 +361,6 @@ h1, h2, h3 {
   width: 5px; height: 5px; border-radius: 50%; background: var(--brand-red);
 }
 
-.ind-compare { margin-top: 3rem; }
-.ind-compare__title { font-size: 1.2rem; margin-bottom: 1.2rem; }
-.ind-compare__scroll {
-  overflow-x: auto;
-  border: 1px solid var(--border); border-radius: var(--radius);
-  background: var(--surface);
-}
-.ind-compare__table { width: 100%; border-collapse: collapse; min-width: 640px; }
-.ind-compare__table th, .ind-compare__table td {
-  text-align: left; padding: .95rem 1.3rem; font-size: .92rem;
-  border-bottom: 1px solid var(--border);
-}
-.ind-compare__table th {
-  font-family: "JetBrains Mono", monospace; font-weight: 500;
-  text-transform: uppercase; letter-spacing: .04em; font-size: .72rem;
-  color: var(--muted); background: var(--surface-alt);
-}
-.ind-compare__table td:first-child {
-  font-family: "Manrope", sans-serif; font-weight: 700; color: var(--ink); white-space: nowrap;
-}
-.ind-compare__table td { font-family: "Manrope", sans-serif; color: var(--muted); }
-.ind-compare__table tr:last-child td { border-bottom: none; }
-
 /* ===== CLIENTES ===== */
 .clientes { padding: 6rem clamp(1.2rem,5vw,3rem); max-width: var(--max); margin: 0 auto; }
 .logos { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3.5rem; }
