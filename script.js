@@ -85,3 +85,20 @@ const counterObserver = new IntersectionObserver(
   { threshold: 0.5 }
 );
 document.querySelectorAll(".stat__num").forEach((el) => counterObserver.observe(el));
+
+// --- Pestañas de industrias ---
+const indTabs = document.querySelectorAll(".ind-tab");
+const indPanels = document.querySelectorAll(".ind-panel");
+indTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    indTabs.forEach((t) => {
+      t.classList.remove("is-active");
+      t.setAttribute("aria-selected", "false");
+    });
+    indPanels.forEach((panel) => { panel.hidden = true; });
+
+    tab.classList.add("is-active");
+    tab.setAttribute("aria-selected", "true");
+    document.querySelector(`.ind-panel[data-panel="${tab.dataset.industry}"]`).hidden = false;
+  });
+});
