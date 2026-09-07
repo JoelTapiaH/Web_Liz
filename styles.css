@@ -104,9 +104,19 @@ h1, h2, h3 {
   display: flex; flex-direction: column;
   justify-content: center;
   padding: 8rem clamp(1.2rem, 5vw, 3.5rem) 5rem;
-  background: #fff;
   border-bottom: 1px solid var(--line);
   color: var(--ink);
+  /* Fondo blanco con foto opcional: guarda tu imagen como imagenes/hero.jpg
+     (una foto del local, el equipo o la ropa lista) y aparecerá aquí sola.
+     El velo blanco mantiene el texto legible sin volver a poner un banner
+     de color sólido; si el archivo no existe, queda un fondo blanco limpio. */
+  background-color: #fff;
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,.97) 0%, rgba(255,255,255,.88) 42%, rgba(255,255,255,.55) 100%),
+    url("imagenes/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .hero__grid {
   max-width: var(--max); width: 100%; margin: 0 auto;
