@@ -18,10 +18,9 @@
       <img src="imagenes/logo.png" alt="Lavandería Liz" class="nav__logo-img" />
     </a>
     <nav class="nav__links" id="navLinks">
+      <a href="#industrias">Industrias</a>
       <a href="#clientes">Clientes</a>
       <a href="#historia">Trayectoria</a>
-      <a href="#numeros">Resultados</a>
-      <a href="#industrias">Industrias</a>
       <a href="#contacto" class="nav__cta">Solicitar cotización</a>
     </nav>
     <button class="nav__burger" id="navBurger" aria-label="Abrir menú">
@@ -31,7 +30,15 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="inicio">
-    <div class="hero__ambient" aria-hidden="true"></div>
+    <!-- Video de fondo opcional: guarda tu archivo como imagenes/hero.mp4
+         (horizontal, ideal 1920x1080, sin audio o silenciado) y se reproducirá
+         solo, en bucle. Mientras carga o si no existe, se ve imagenes/hero.jpg
+         como imagen fija; si tampoco existe, queda el fondo hueso liso. -->
+    <video class="hero__video" id="heroVideo" autoplay muted loop playsinline poster="imagenes/hero.jpg">
+      <source src="imagenes/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__overlay" aria-hidden="true"></div>
+
     <div class="hero__grid">
       <div class="hero__content reveal">
         <h1 class="hero__title">
@@ -44,8 +51,8 @@
           confían en nosotros para el cuidado diario de sus textiles.
         </p>
         <div class="hero__actions">
-          <a href="#contacto" class="btn btn--primary">Solicitar cotización</a>
-          <a href="#historia" class="btn btn--ghost">Ver trayectoria →</a>
+          <a href="https://wa.me/000000000000" class="btn btn--primary" target="_blank" rel="noopener">Conversemos por WhatsApp</a>
+          <a href="#historia" class="btn btn--ghost">Conoce nuestra historia →</a>
         </div>
       </div>
     </div>
@@ -55,181 +62,10 @@
     </div>
   </section>
 
-  <!-- ===== CLIENTES ===== -->
-  <section class="clientes" id="clientes">
-    <div class="section-head reveal">
-      <h2>Empresas y familias que confían en nosotros</h2>
-    </div>
-
-    <div class="logos reveal">
-      <div class="logo-chip">
-        <img src="imagenes/Sedapall.jpg" alt="Sedapal" />
-        <span class="tag tag--blue">Agua potable</span>
-      </div>
-      <div class="logo-chip">
-        <img src="imagenes/essalud-logo-png_seeklogo-205729.png" alt="EsSalud" />
-        <span class="tag tag--green">Salud</span>
-      </div>
-      <div class="logo-chip">
-        <img src="imagenes/Colegio_mayor_coar_logo.397416b4.png" alt="COAR · Colegios de Alto Rendimiento" />
-        <span class="tag tag--yellow">Educación</span>
-      </div>
-      <div class="logo-chip">
-        <img src="imagenes/contonga.76ade7f5.png" alt="Contonga Minería" />
-        <span class="tag tag--red">Minería</span>
-      </div>
-      <div class="logo-chip">
-        <img src="imagenes/logolincuna.png" alt="Compañía Minera Lincuna" />
-        <span class="tag tag--red">Minería</span>
-      </div>
-      <div class="logo-chip">
-        <img src="imagenes/barrick.jpg" alt="Barrick" />
-        <span class="tag tag--red">Minería</span>
-      </div>
-      <div class="logo-chip">
-        <img src="imagenes/nyrstar.png" alt="Nyrstar" />
-        <span class="tag tag--red">Minería</span>
-      </div>
-      <div class="logo-chip">
-        <img src="imagenes/komatsu-mitsui.png" alt="Komatsu-Mitsui" />
-        <span class="tag tag--red">Minería</span>
-      </div>
-      <div class="logo-chip">
-        <img src="imagenes/confipetrol.jpeg" alt="Confipetrol" />
-        <span class="tag tag--yellow">Energía</span>
-      </div>
-      <div class="logo-chip">
-        <img src="imagenes/cosapi.jpeg" alt="Cosapi" />
-        <span class="tag tag--blue">Construcción</span>
-      </div>
-      <div class="logo-chip">
-        <img src="imagenes/skanska.jpeg" alt="Skanska" />
-        <span class="tag tag--blue">Construcción</span>
-      </div>
-      <div class="logo-chip">
-        <img src="imagenes/fiscalia-nacion.jpeg" alt="Ministerio Público · Fiscalía de la Nación" />
-        <span class="tag tag--green">Gobierno</span>
-      </div>
-      <div class="logo-chip">
-        <img src="imagenes/sodexo.png" alt="Sodexo" />
-        <span class="tag tag--yellow">Facilities</span>
-      </div>
-    </div>
-
-    <div class="testi-grid">
-      <blockquote class="testi reveal">
-        <p>Llevamos años con ellos para la lencería del hotel. Nunca un retraso, nunca una queja.</p>
-        <footer><strong>María G.</strong> · Gerente, Hotel Aurora</footer>
-      </blockquote>
-      <blockquote class="testi reveal">
-        <p>La recogida a domicilio me cambió la vida. Ropa impecable y entregada a tiempo.</p>
-        <footer><strong>Carlos R.</strong> · Cliente desde 2015</footer>
-      </blockquote>
-      <blockquote class="testi reveal">
-        <p>Profesionales de verdad. Tratan cada uniforme como si fuera suyo.</p>
-        <footer><strong>Ana P.</strong> · FitZone Gym</footer>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- ===== STATS / RESULTADOS ===== -->
-  <section class="stats" id="numeros">
-    <div class="section-head reveal">
-      <h2>Resultados que respaldan 35 años de trabajo</h2>
-    </div>
-    <div class="stats__grid">
-      <div class="stat reveal">
-        <div class="stat__num" data-target="35" data-suffix="">0</div>
-        <div class="stat__label">Años de experiencia</div>
-      </div>
-      <div class="stat reveal">
-        <div class="stat__num" data-target="500000" data-suffix="+">0</div>
-        <div class="stat__label">Kilos de ropa lavados</div>
-      </div>
-      <div class="stat reveal">
-        <div class="stat__num" data-target="12000" data-suffix="+">0</div>
-        <div class="stat__label">Clientes atendidos</div>
-      </div>
-      <div class="stat reveal">
-        <div class="stat__num" data-target="80" data-suffix="+">0</div>
-        <div class="stat__label">Empresas aliadas</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TRAYECTORIA / HISTORIA ===== -->
-  <section class="historia" id="historia">
-    <div class="section-head reveal">
-      <h2>35 años de evolución constante</h2>
-      <p class="historia__intro">Del primer local a la operación de hoy: la misma exigencia de calidad, con procesos y equipos que se han modernizado en cada etapa.</p>
-    </div>
-
-    <ol class="hitos">
-
-      <!-- 1991 -->
-      <li class="hito hito--1 reveal">
-        <div class="hito__media">
-          <img src="imagenes/1991.jpg" alt="Lavandería Liz en 1991" />
-        </div>
-        <div class="hito__text">
-          <span class="hito__year">1991</span>
-          <h3>Los inicios</h3>
-          <p>Abrimos con una lavadora, una plancha y el compromiso de tratar cada prenda como propia. Los primeros clientes de aquel local hoy siguen con nosotros.</p>
-        </div>
-      </li>
-
-      <!-- 2003 -->
-      <li class="hito hito--2 reveal">
-        <div class="hito__media">
-          <div class="photo-ph">
-            <span class="photo-ph__txt">1 de 4</span>
-            <span class="photo-ph__hint">Foto de 2003 pendiente</span>
-          </div>
-        </div>
-        <div class="hito__text">
-          <span class="hito__year">2003</span>
-          <h3>Crecimiento con la comunidad</h3>
-          <p>El servicio constante nos convirtió en referencia de confianza en la zona. Sumamos equipo y ampliamos horarios para sostener la demanda.</p>
-        </div>
-      </li>
-
-      <!-- 2015 -->
-      <li class="hito hito--3 reveal">
-        <div class="hito__media">
-          <div class="photo-ph">
-            <span class="photo-ph__txt">2 de 4</span>
-            <span class="photo-ph__hint">Foto de 2015 pendiente</span>
-          </div>
-        </div>
-        <div class="hito__text">
-          <span class="hito__year">2015</span>
-          <h3>Expansión al sector empresarial</h3>
-          <p>Hoteles, restaurantes y gimnasios comenzaron a confiarnos su lencería y uniformes. Renovamos equipos para responder a un volumen mayor sin perder consistencia.</p>
-        </div>
-      </li>
-
-      <!-- HOY -->
-      <li class="hito hito--4 reveal">
-        <div class="hito__media">
-          <div class="photo-ph">
-            <span class="photo-ph__txt">3 de 4</span>
-            <span class="photo-ph__hint">Foto actual pendiente</span>
-          </div>
-        </div>
-        <div class="hito__text">
-          <span class="hito__year hito__year--now">Hoy</span>
-          <h3>Operación moderna, mismo estándar</h3>
-          <p>Equipos de última generación, procesos eco-amigables, recogida a domicilio y seguimiento de pedido. La misma exigencia de calidad, con un servicio más rápido.</p>
-        </div>
-      </li>
-
-    </ol>
-  </section>
-
-  <!-- ===== SOLUCIONES POR INDUSTRIA ===== -->
+  <!-- ===== SOLUCIONES POR INDUSTRIA + KPIS ===== -->
   <section class="industrias" id="industrias">
     <div class="section-head reveal">
-      <h2>Servicios diseñados para cada rubro</h2>
+      <h2>Industrias con las que trabajamos</h2>
       <p class="industrias__intro">Cada sector tiene prioridades distintas. Ajustamos el proceso y el manejo a lo que cada rubro realmente necesita.</p>
     </div>
 
@@ -398,6 +234,175 @@
       </div>
 
     </div>
+
+    <!-- KPIs -->
+    <div class="industrias__stats">
+      <h3 class="industrias__stats-title">Números que respaldan nuestro trabajo</h3>
+      <div class="stats__grid">
+        <div class="stat reveal">
+          <div class="stat__num" data-target="35" data-suffix="">0</div>
+          <div class="stat__label">Años de experiencia</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num" data-target="500000" data-suffix="+">0</div>
+          <div class="stat__label">Kilos de ropa lavados</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num" data-target="12000" data-suffix="+">0</div>
+          <div class="stat__label">Clientes atendidos</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num" data-target="80" data-suffix="+">0</div>
+          <div class="stat__label">Empresas aliadas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLIENTES ===== -->
+  <section class="clientes" id="clientes">
+    <div class="section-head reveal">
+      <h2>Empresas y familias que confían en nosotros</h2>
+    </div>
+
+    <div class="logos reveal">
+      <div class="logo-chip">
+        <img src="imagenes/Sedapall.jpg" alt="Sedapal" />
+        <span class="tag tag--blue">Agua potable</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/essalud-logo-png_seeklogo-205729.png" alt="EsSalud" />
+        <span class="tag tag--green">Salud</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/Colegio_mayor_coar_logo.397416b4.png" alt="COAR · Colegios de Alto Rendimiento" />
+        <span class="tag tag--yellow">Educación</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/contonga.76ade7f5.png" alt="Contonga Minería" />
+        <span class="tag tag--red">Minería</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/logolincuna.png" alt="Compañía Minera Lincuna" />
+        <span class="tag tag--red">Minería</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/barrick.jpg" alt="Barrick" />
+        <span class="tag tag--red">Minería</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/nyrstar.png" alt="Nyrstar" />
+        <span class="tag tag--red">Minería</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/komatsu-mitsui.png" alt="Komatsu-Mitsui" />
+        <span class="tag tag--red">Minería</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/confipetrol.jpeg" alt="Confipetrol" />
+        <span class="tag tag--yellow">Energía</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/cosapi.jpeg" alt="Cosapi" />
+        <span class="tag tag--blue">Construcción</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/skanska.jpeg" alt="Skanska" />
+        <span class="tag tag--blue">Construcción</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/fiscalia-nacion.jpeg" alt="Ministerio Público · Fiscalía de la Nación" />
+        <span class="tag tag--green">Gobierno</span>
+      </div>
+      <div class="logo-chip">
+        <img src="imagenes/sodexo.png" alt="Sodexo" />
+        <span class="tag tag--yellow">Facilities</span>
+      </div>
+    </div>
+
+    <div class="testi-grid">
+      <blockquote class="testi reveal">
+        <p>Llevamos años con ellos para la lencería del hotel. Nunca un retraso, nunca una queja.</p>
+        <footer><strong>María G.</strong> · Gerente, Hotel Aurora</footer>
+      </blockquote>
+      <blockquote class="testi reveal">
+        <p>La recogida a domicilio me cambió la vida. Ropa impecable y entregada a tiempo.</p>
+        <footer><strong>Carlos R.</strong> · Cliente desde 2015</footer>
+      </blockquote>
+      <blockquote class="testi reveal">
+        <p>Profesionales de verdad. Tratan cada uniforme como si fuera suyo.</p>
+        <footer><strong>Ana P.</strong> · FitZone Gym</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== TRAYECTORIA / HISTORIA ===== -->
+  <section class="historia" id="historia">
+    <div class="section-head reveal">
+      <h2>35 años de evolución constante</h2>
+      <p class="historia__intro">Del primer local a la operación de hoy: la misma exigencia de calidad, con procesos y equipos que se han modernizado en cada etapa.</p>
+    </div>
+
+    <ol class="hitos">
+
+      <!-- 1991 -->
+      <li class="hito hito--1 reveal">
+        <div class="hito__media">
+          <img src="imagenes/1991.jpg" alt="Lavandería Liz en 1991" />
+        </div>
+        <div class="hito__text">
+          <span class="hito__year">1991</span>
+          <h3>Los inicios</h3>
+          <p>Abrimos con una lavadora, una plancha y el compromiso de tratar cada prenda como propia. Los primeros clientes de aquel local hoy siguen con nosotros.</p>
+        </div>
+      </li>
+
+      <!-- 2003 -->
+      <li class="hito hito--2 reveal">
+        <div class="hito__media">
+          <div class="photo-ph">
+            <span class="photo-ph__txt">1 de 4</span>
+            <span class="photo-ph__hint">Foto de 2003 pendiente</span>
+          </div>
+        </div>
+        <div class="hito__text">
+          <span class="hito__year">2003</span>
+          <h3>Crecimiento con la comunidad</h3>
+          <p>El servicio constante nos convirtió en referencia de confianza en la zona. Sumamos equipo y ampliamos horarios para sostener la demanda.</p>
+        </div>
+      </li>
+
+      <!-- 2015 -->
+      <li class="hito hito--3 reveal">
+        <div class="hito__media">
+          <div class="photo-ph">
+            <span class="photo-ph__txt">2 de 4</span>
+            <span class="photo-ph__hint">Foto de 2015 pendiente</span>
+          </div>
+        </div>
+        <div class="hito__text">
+          <span class="hito__year">2015</span>
+          <h3>Expansión al sector empresarial</h3>
+          <p>Hoteles, restaurantes y gimnasios comenzaron a confiarnos su lencería y uniformes. Renovamos equipos para responder a un volumen mayor sin perder consistencia.</p>
+        </div>
+      </li>
+
+      <!-- HOY -->
+      <li class="hito hito--4 reveal">
+        <div class="hito__media">
+          <div class="photo-ph">
+            <span class="photo-ph__txt">3 de 4</span>
+            <span class="photo-ph__hint">Foto actual pendiente</span>
+          </div>
+        </div>
+        <div class="hito__text">
+          <span class="hito__year hito__year--now">Hoy</span>
+          <h3>Operación moderna, mismo estándar</h3>
+          <p>Equipos de última generación, procesos eco-amigables, recogida a domicilio y seguimiento de pedido. La misma exigencia de calidad, con un servicio más rápido.</p>
+        </div>
+      </li>
+
+    </ol>
   </section>
 
   <!-- ===== CTA / CONTACTO ===== -->
@@ -422,9 +427,9 @@
       </div>
       <div class="footer__col">
         <span class="footer__label">Navegación</span>
+        <a href="#industrias">Industrias</a>
         <a href="#clientes">Clientes</a>
         <a href="#historia">Trayectoria</a>
-        <a href="#industrias">Industrias</a>
       </div>
       <div class="footer__col">
         <span class="footer__label">Contacto</span>

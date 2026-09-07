@@ -130,29 +130,16 @@ h1, h2, h3 {
   border-bottom: 1px solid var(--border);
   color: var(--ink-soft);
   overflow: hidden;
-  /* Fondo cálido con foto opcional: guarda tu imagen como imagenes/hero.jpg
-     (el local, el equipo o la ropa lista) y aparecerá aquí sola, integrada
-     al tono monocromo. Sin ese archivo, queda el fondo hueso liso. */
   background-color: var(--paper);
-  background-image:
-    radial-gradient(ellipse at center, rgba(251,251,250,.93) 0%, rgba(251,251,250,.8) 55%, rgba(251,251,250,.6) 100%),
-    url("imagenes/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
-/* mancha ambiental, única y muy sutil, para dar profundidad sin banners de color */
-.hero__ambient { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-.hero__ambient::before {
-  content: ""; position: absolute; width: 900px; height: 900px; border-radius: 50%;
-  top: -320px; right: -220px;
-  background: radial-gradient(circle, var(--pastel-blue-bg) 0%, transparent 70%);
-  opacity: .55;
-  animation: driftBlob 24s ease-in-out infinite;
+.hero__video {
+  position: absolute; inset: 0; z-index: 0;
+  width: 100%; height: 100%; object-fit: cover;
 }
-@keyframes driftBlob {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-40px, 30px) scale(1.08); }
+/* velo cálido sobre el video para mantener el texto legible sin tapar la imagen */
+.hero__overlay {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(251,251,250,.85) 0%, rgba(251,251,250,.55) 55%, rgba(251,251,250,.3) 100%);
 }
 .hero__grid {
   position: relative; z-index: 1;
@@ -185,12 +172,12 @@ h1, h2, h3 {
 
 /* ===== SHARED SECTION HEADS ===== */
 .section-head { max-width: 700px; margin: 0 auto 3rem; padding: 0 1rem; }
-.section-head h2, .stats__head h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.section-head h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
 
-/* ===== STATS (bento) ===== */
-.stats {
-  padding: 6rem clamp(1.2rem,5vw,3rem);
-  max-width: var(--max); margin: 0 auto;
+/* ===== KPIs (bento), dentro de Industrias ===== */
+.industrias__stats { margin-top: 4rem; padding-top: 3.5rem; border-top: 1px solid var(--border); }
+.industrias__stats-title {
+  text-align: center; font-size: clamp(1.3rem, 3vw, 1.7rem); margin-bottom: 2rem;
 }
 .stats__grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
@@ -360,7 +347,8 @@ h1, h2, h3 {
   letter-spacing: .08em; font-size: .74rem; color: rgba(255,255,255,.45); margin-bottom: .3rem;
 }
 .footer__logo {
-  height: 40px; width: auto; margin-bottom: .8rem;
+  height: 48px; width: auto; align-self: flex-start; margin-bottom: .8rem;
+  object-fit: contain;
 }
 .footer__col--brand p { font-family: "Manrope", sans-serif; color: rgba(255,255,255,.6); font-size: .92rem; max-width: 300px; }
 .footer__bottom { max-width: var(--max); margin: 0 auto; padding: 1.6rem 0; }
@@ -408,7 +396,7 @@ h1, h2, h3 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__scroll span::after, .hero__ambient::before { animation: none; }
+  .hero__scroll span::after { animation: none; }
   .reveal { transition: none; opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
 }

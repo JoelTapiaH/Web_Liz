@@ -32,9 +32,15 @@ En la sección de contacto, reemplaza `000000000000` por tu número con código 
 
 ### 3. Foto de fondo del banner principal (hero)
 Guarda tu foto (del local, el equipo o la ropa lista) como `imagenes/hero.jpg`
-(idealmente horizontal, 1920×1080 o similar) y aparecerá sola como fondo de
-la portada, con un velo blanco para que el texto siga siendo legible. Si no
-subes ninguna, el banner se queda en blanco liso.
+(idealmente horizontal, 1920×1080 o similar). Se usa como imagen mientras
+carga el video (o en su lugar, si no subes video) con un velo claro para que
+el texto siga siendo legible. Si no subes ninguna, el banner se queda en
+blanco liso.
+
+### 4. Video de fondo del banner principal (hero)
+Guarda tu video como `imagenes/hero.mp4` (horizontal, ideal 1920×1080, sin
+audio o silenciado, pocos segundos en bucle) y se reproducirá solo detrás del
+título. Si no subes ninguno, se ve la foto del punto 3, o el fondo liso.
 
 ### 5. Fotos de la trayectoria (línea de tiempo)
 La sección de historia cuenta tu evolución con fotos: las antiguas se ven en
@@ -45,14 +51,15 @@ coloca el archivo en la carpeta `imagenes/` y, en cada bloque
 <img src="imagenes/2003.jpg" alt="Lavandería Liz en 2003">
 ```
 
-### 6. Servicios, clientes y testimonios
-Edita los textos en las secciones `<!-- SERVICIOS -->` y `<!-- CLIENTES -->`. Cambia los nombres de "Hotel Aurora", etc. por tus clientes reales.
+### 6. Industrias, clientes y testimonios
+Edita los textos en las secciones `<!-- SOLUCIONES POR INDUSTRIA -->` y
+`<!-- CLIENTES -->`. Cambia los logos y nombres por tus clientes reales.
 
 ### 7. Colores
-En `styles.css`, arriba de todo, en `:root` puedes cambiar la paleta (`--navy`, `--blue`, `--red`, `--steel`, etc.).
+En `styles.css`, arriba de todo, en `:root` puedes cambiar la paleta (`--ink`, `--brand-red`, `--pastel-blue-text`, etc.).
 
 ## Publicar el sitio (gratis)
-Sube estos 3 archivos a cualquiera de estos servicios:
+Sube `index.html`, `styles.css`, `script.js` y la carpeta `imagenes/` completa a cualquiera de estos servicios:
 - **Netlify** (arrastra la carpeta a netlify.com/drop)
 - **GitHub Pages**
 - **Vercel**

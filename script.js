@@ -17,6 +17,16 @@ document.querySelectorAll("img.nav__logo-img, img.hero__logo, img.footer__logo")
     });
   });
 
+// --- Video del hero: si no existe imagenes/hero.mp4, ocultarlo (queda el póster o el fondo liso) ---
+const heroVideo = document.getElementById("heroVideo");
+if (heroVideo) {
+  heroVideo.addEventListener("error", () => { heroVideo.hidden = true; }, true);
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    heroVideo.pause();
+    heroVideo.removeAttribute("autoplay");
+  }
+}
+
 // --- Nav: fondo al hacer scroll ---
 const nav = document.getElementById("nav");
 window.addEventListener("scroll", () => {
