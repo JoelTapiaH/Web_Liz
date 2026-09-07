@@ -12,11 +12,16 @@
   --surface-alt: #f7f6f3;
   --border: #eaeaea;
 
-  /* ---- Pasteles muy desaturados (única fuente de color) ---- */
+  /* ---- Pasteles muy desaturados (para tags) ---- */
   --pastel-red-bg: #fdebec;   --pastel-red-text: #9f2f2d;
   --pastel-blue-bg: #e1f3fe;  --pastel-blue-text: #1f6c9f;
   --pastel-green-bg: #edf3ec; --pastel-green-text: #346538;
   --pastel-yellow-bg: #fbf3db; --pastel-yellow-text: #956400;
+
+  /* ---- Tonos de marca (del logo), atenuados para no saturar ---- */
+  --brand-red: #b3423d;   --brand-red-dark: #93332f;
+  --brand-blue: #2f6f93;
+  --brand-yellow: #c9962a;
 
   --radius: 10px;
   --radius-sm: 6px;
@@ -72,8 +77,8 @@ h1, h2, h3 {
   border: 1.5px solid transparent;
 }
 .btn:active { transform: scale(.98); }
-.btn--primary { background: var(--ink); color: #fff; }
-.btn--primary:hover { background: #333333; }
+.btn--primary { background: var(--brand-red); color: #fff; }
+.btn--primary:hover { background: var(--brand-red-dark); }
 .btn--ghost { color: var(--ink); border-color: var(--border); }
 .btn--ghost:hover { border-color: var(--ink); background: rgba(17,17,17,.03); }
 
@@ -96,11 +101,11 @@ h1, h2, h3 {
 .nav__logo-img { height: 42px; width: auto; display: block; transition: height .25s; }
 .nav.scrolled .nav__logo-img { height: 36px; }
 .logo-fallback {
-  font-family: "Archivo", sans-serif; font-weight: 800; font-size: 1.25rem; color: var(--ink);
+  font-family: "Archivo", sans-serif; font-weight: 800; font-size: 1.25rem; color: var(--brand-red);
 }
-.logo-fallback strong { color: var(--pastel-red-text); }
-.footer .logo-fallback { font-size: 1.4rem; color: #fff; }
-.footer .logo-fallback strong { color: var(--pastel-red-bg); }
+.logo-fallback strong { color: var(--brand-yellow); }
+.footer .logo-fallback { font-size: 1.4rem; }
+.footer .logo-fallback strong { color: var(--brand-yellow); }
 .nav__links { display: flex; align-items: center; gap: 2.1rem; }
 .nav__links a {
   text-decoration: none; color: var(--ink-soft); font-weight: 500;
@@ -108,10 +113,10 @@ h1, h2, h3 {
 }
 .nav__links a:hover { color: var(--ink); }
 .nav__cta {
-  background: var(--ink); color: #fff !important;
+  background: var(--brand-red); color: #fff !important;
   padding: .6rem 1.3rem; border-radius: var(--radius-sm); font-weight: 600;
 }
-.nav__cta:hover { background: #333333; }
+.nav__cta:hover { background: var(--brand-red-dark); }
 .nav__burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
 .nav__burger span { width: 26px; height: 2px; background: var(--ink); transition: .3s; }
 
