@@ -36,9 +36,9 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: "Newsreader", Georgia, serif;
-  line-height: 1.1;
-  font-weight: 600;
+  font-family: "Archivo", "Helvetica Neue", sans-serif;
+  line-height: 1.08;
+  font-weight: 800;
   letter-spacing: -.02em;
   color: var(--ink);
 }
@@ -96,7 +96,7 @@ h1, h2, h3 {
 .nav__logo-img { height: 42px; width: auto; display: block; transition: height .25s; }
 .nav.scrolled .nav__logo-img { height: 36px; }
 .logo-fallback {
-  font-family: "Newsreader", serif; font-weight: 600; font-size: 1.3rem; color: var(--ink);
+  font-family: "Archivo", sans-serif; font-weight: 800; font-size: 1.25rem; color: var(--ink);
 }
 .logo-fallback strong { color: var(--pastel-red-text); }
 .footer .logo-fallback { font-size: 1.4rem; color: #fff; }
@@ -340,7 +340,7 @@ h1, h2, h3 {
   transition: box-shadow .2s ease;
 }
 .testi:hover { box-shadow: 0 2px 12px rgba(17,17,17,.04); }
-.testi p { font-family: "Newsreader", serif; font-weight: 500; font-size: 1.1rem; margin-bottom: 1rem; color: var(--ink); }
+.testi p { font-family: "Manrope", sans-serif; font-weight: 500; font-size: 1.05rem; margin-bottom: 1rem; color: var(--ink); }
 .testi footer { font-family: "Manrope", sans-serif; color: var(--muted); font-size: .88rem; }
 .testi footer strong { color: var(--ink); }
 
