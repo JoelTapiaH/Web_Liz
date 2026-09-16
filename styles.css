@@ -174,12 +174,12 @@ h1, h2, h3 {
 .section-head { max-width: 700px; margin: 0 auto 3rem; padding: 0 1rem; }
 .section-head h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
 
-/* ===== KPIs (bento), dentro de Industrias ===== */
-.industrias__stats { margin-top: 4rem; padding-top: 3.5rem; border-top: 1px solid var(--border); }
-.industrias__stats-title {
-  text-align: center; font-size: clamp(1.3rem, 3vw, 1.7rem); margin-bottom: 2rem;
+/* ===== MÉTRICAS (bento) ===== */
+.stats { padding: 6rem clamp(1.2rem,5vw,3rem); max-width: var(--max); margin: 0 auto; }
+.stats__subtitle {
+  text-align: center; font-size: clamp(1.3rem, 3vw, 1.7rem);
+  margin: 3.5rem 0 2rem;
 }
-.industrias__stats-title--sub { margin-top: 3.5rem; }
 .stats__grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
 }
