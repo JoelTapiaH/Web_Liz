@@ -322,6 +322,18 @@ h1, h2, h3 {
 .testi footer { font-family: "Manrope", sans-serif; color: var(--muted); font-size: .88rem; }
 .testi footer strong { color: var(--ink); }
 
+/* ===== PREMIO ===== */
+.premio {
+  padding: 6rem clamp(1.2rem,5vw,3rem);
+  max-width: var(--max); margin: 0 auto;
+}
+.premio__intro { font-family: "Manrope", sans-serif; color: var(--muted); font-size: 1.05rem; margin-top: .8rem; }
+.premio__gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.premio__img {
+  display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
+  border-radius: var(--radius); border: 1px solid var(--border);
+}
+
 /* ===== CTA ===== */
 .cta { padding: 5rem clamp(1.2rem,5vw,3rem); }
 .cta__box {
@@ -375,6 +387,7 @@ h1, h2, h3 {
   .testi-grid { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: 1fr; gap: 2rem; }
   .ind-panel__grid { grid-template-columns: 1fr; }
+  .premio__gallery { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
   .nav__links {
