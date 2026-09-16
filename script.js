@@ -17,13 +17,17 @@ document.querySelectorAll("img.nav__logo-img, img.hero__logo, img.footer__logo")
     });
   });
 
-// --- Video del hero: si no existe imagenes/hero.mp4, ocultarlo (queda el póster o el fondo liso) ---
-const heroVideo = document.getElementById("heroVideo");
-if (heroVideo) {
-  heroVideo.addEventListener("error", () => { heroVideo.hidden = true; }, true);
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    heroVideo.pause();
-    heroVideo.removeAttribute("autoplay");
+// --- Carrusel del hero: alterna las fotos de la flota cada 5s ---
+const heroCarousel = document.getElementById("heroCarousel");
+if (heroCarousel && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const heroSlides = heroCarousel.querySelectorAll(".hero__slide");
+  let heroSlideIndex = 0;
+  if (heroSlides.length > 1) {
+    setInterval(() => {
+      heroSlides[heroSlideIndex].classList.remove("is-active");
+      heroSlideIndex = (heroSlideIndex + 1) % heroSlides.length;
+      heroSlides[heroSlideIndex].classList.add("is-active");
+    }, 5000);
   }
 }
 

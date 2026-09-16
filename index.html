@@ -31,13 +31,11 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="inicio">
-    <!-- Video de fondo opcional: guarda tu archivo como imagenes/hero.mp4
-         (horizontal, ideal 1920x1080, sin audio o silenciado) y se reproducirá
-         solo, en bucle. Mientras carga o si no existe, se ve imagenes/hero.jpg
-         como imagen fija; si tampoco existe, queda el fondo hueso liso. -->
-    <video class="hero__video" id="heroVideo" autoplay muted loop playsinline poster="imagenes/hero.jpg">
-      <source src="imagenes/hero.mp4" type="video/mp4" />
-    </video>
+    <!-- Carrusel de fondo: la flota real de Lavandería Liz -->
+    <div class="hero__carousel" id="heroCarousel" aria-hidden="true">
+      <img src="imagenes/Camion.png" alt="" class="hero__slide is-active" />
+      <img src="imagenes/Miniban.png" alt="" class="hero__slide" />
+    </div>
     <div class="hero__overlay" aria-hidden="true"></div>
 
     <div class="hero__grid">

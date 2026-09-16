@@ -37,17 +37,13 @@ En la sección de contacto, reemplaza `000000000000` por tu número con código 
 <a href="tel:+000000000000" ...>
 ```
 
-### 3. Foto de fondo del banner principal (hero)
-Guarda tu foto (del local, el equipo o la ropa lista) como `imagenes/hero.jpg`
-(idealmente horizontal, 1920×1080 o similar). Se usa como imagen mientras
-carga el video (o en su lugar, si no subes video) con un velo claro para que
-el texto siga siendo legible. Si no subes ninguna, el banner se queda en
-blanco liso.
-
-### 4. Video de fondo del banner principal (hero)
-Guarda tu video como `imagenes/hero.mp4` (horizontal, ideal 1920×1080, sin
-audio o silenciado, pocos segundos en bucle) y se reproducirá solo detrás del
-título. Si no subes ninguno, se ve la foto del punto 3, o el fondo liso.
+### 3-4. Carrusel de fondo del banner principal (hero)
+El banner alterna dos fotos de la flota (`imagenes/Camion.png` y
+`imagenes/Miniban.png`) cada 5 segundos, con un velo claro encima para que el
+texto siga siendo legible. Para cambiarlas o agregar más, edita el bloque
+`<div class="hero__carousel" id="heroCarousel">` en `index.html`: cada foto es
+un `<img class="hero__slide">` (la primera lleva además la clase
+`is-active`), y agrega o quita imágenes ahí.
 
 ### 5. Fotos de la trayectoria (línea de tiempo)
 La sección de historia cuenta tu evolución con fotos: las antiguas se ven en
