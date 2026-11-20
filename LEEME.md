@@ -69,3 +69,60 @@ Sube `index.html`, `styles.css`, `script.js` y la carpeta `imagenes/` completa a
 - **GitHub Pages**
 - **Vercel**
 - O súbelos por FTP a tu hosting actual.
+
+---
+
+## Información por completar (etiquetas amarillas "EJEMPLO")
+
+En la web hay etiquetas amarillas **EJEMPLO** sobre datos inventados. Cuando
+pongas el dato real, **borra la etiqueta**: es el texto
+`<span class="sample">Ejemplo</span>`. Para encontrarlas todas, busca
+`class="sample"` en `index.html` (Cmd + F). **No publiques la web con
+etiquetas amarillas visibles.**
+
+### Certificaciones (franja debajo de los números)
+Busca `CERTIFICACIONES` en `index.html`. Cada sello es un `<li>` con un nombre
+en `<b>` y una descripción corta:
+```html
+<li>...<span><b>ISO 9001</b>Gestión de calidad</span></li>
+```
+Cambia el texto, borra los `<li>` que no tengas o copia uno para agregar otro.
+
+### Nuestra planta (fotos)
+1. Guarda las fotos en `imagenes/` (JPG de ~1500 px de ancho), por ejemplo
+   `planta-lavadoras.jpg`.
+2. Busca `NUESTRA PLANTA` y reemplaza cada espacio vacío
+   (`<div class="plant__ph">...</div>`) por:
+```html
+<img src="imagenes/planta-lavadoras.jpg" alt="Lavadoras industriales de Lavandería Liz" loading="lazy" />
+```
+3. Los números de abajo (`35 t`, `6`, `48 h`) se cambian ahí mismo.
+
+### Caso de éxito y testimonios
+Busca `Caso de éxito`. Cambia la frase, la descripción, el nombre y cargo
+(`<footer>`) y las 3 cifras de la derecha. Pide permiso al cliente antes de
+publicar su nombre. Los testimonios están justo debajo (`testi`): nombre,
+cargo y empresa reales.
+
+### Preguntas frecuentes
+Busca `PREGUNTAS FRECUENTES`. Cada pregunta es un bloque:
+```html
+<details class="faq__item">
+  <summary>¿Pregunta?<span class="faq__plus" aria-hidden="true"></span></summary>
+  <p>Respuesta.</p>
+</details>
+```
+
+### Cotización: correo, dirección y brochure
+Busca `COTIZACIÓN`:
+- Correo: cambia `ventas@lavanderializ.pe`.
+- Dirección: cambia `Dirección de la planta`.
+- Brochure: guarda el PDF en la carpeta (ej. `brochure-liz.pdf`) y cambia el
+  `href="#"` de "Descargar brochure" por `href="brochure-liz.pdf" download`.
+- El formulario envía todo por WhatsApp; no necesita configuración.
+- "política de privacidad": enlaza a tu página de privacidad o quita la frase.
+
+### Libro de Reclamaciones (obligatorio en Perú)
+En el footer, el enlace "Libro de Reclamaciones" tiene `href="#"`. Cámbialo
+por la dirección de tu libro virtual (por ejemplo, el de INDECOPI o tu
+proveedor).

@@ -183,3 +183,34 @@ document.querySelectorAll("[data-wa]").forEach((a) => {
     : `Hola, quisiera una cotización de lavandería para ${who}.`;
   a.href = "https://wa.me/51956845005?text=" + encodeURIComponent(msg);
 });
+
+/* ============================================================
+   Formulario de cotización y preguntas frecuentes
+   ============================================================ */
+
+// Formulario de cotización: arma el mensaje y lo abre en WhatsApp
+// (no necesita servidor; luego se puede conectar a un correo).
+const cotizaForm = document.getElementById("cotizaForm");
+if (cotizaForm) {
+  cotizaForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(cotizaForm));
+    const lineas = [
+      "Hola, quisiera una cotización.",
+      `Nombre: ${d.nombre}`,
+      d.empresa && `Empresa: ${d.empresa}`,
+      `Rubro: ${d.rubro}`,
+      d.ciudad && `Ciudad / unidad: ${d.ciudad}`,
+      d.detalle && `Detalle: ${d.detalle}`,
+    ].filter(Boolean);
+    window.open("https://wa.me/51956845005?text=" + encodeURIComponent(lineas.join("\n")), "_blank", "noopener");
+  });
+}
+
+// Preguntas frecuentes: solo una abierta a la vez
+const faqItems = document.querySelectorAll(".faq__item");
+faqItems.forEach((item) =>
+  item.addEventListener("toggle", () => {
+    if (item.open) faqItems.forEach((o) => { if (o !== item) o.open = false; });
+  })
+);
