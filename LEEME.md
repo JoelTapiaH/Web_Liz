@@ -19,7 +19,7 @@ Busca `data-target` y cambia el valor. Por ejemplo:
 
 Valores actuales (cámbialos por los reales):
 - Años de experiencia: **35**
-- Kilos lavados (histórico): **500,000+**
+- Toneladas de ropa lavadas (histórico): **+500** (usa `data-prefix="+"` para el signo delante)
 - Clientes: **12,000+**
 - Empresas aliadas: **80+**
 
@@ -31,16 +31,18 @@ Y en el bloque "Lo que procesamos cada mes" (capacidad mensual):
 - Edredones lavados: **3,800**
 
 ### 2. WhatsApp y teléfono
-En la sección de contacto, reemplaza `000000000000` por tu número con código de país (sin signos ni espacios), por ejemplo `521234567890`:
-```html
-<a href="https://wa.me/000000000000" ...>
-<a href="tel:+000000000000" ...>
-```
+El número actual es **956 845 005** (el que aparece en la miniván), con código
+de Perú: `51956845005`. Aparece en 5 lugares de `index.html` (hero, contacto,
+footer y el botón flotante verde). Para cambiarlo, busca `51956845005` y
+reemplázalo en todos. El texto `?text=...` es el mensaje que se pre-escribe
+al abrir WhatsApp.
 
 ### 3-4. Carrusel de fondo del banner principal (hero)
-El banner alterna dos fotos de la flota (`imagenes/Camion.png` y
-`imagenes/Miniban.png`) cada 5 segundos, con un velo claro encima para que el
-texto siga siendo legible. Para cambiarlas o agregar más, edita el bloque
+El banner alterna dos fotos de la flota (`imagenes/Camion.jpg` y
+`imagenes/Miniban.jpg`, versiones comprimidas de los PNG originales) cada 5
+segundos, con un velo oscuro encima para que el texto blanco siga siendo
+legible. Usa siempre JPG de ~1500 px de ancho (no PNG de 2 MB) para que cargue
+rápido en celulares. Para cambiarlas o agregar más, edita el bloque
 `<div class="hero__carousel" id="heroCarousel">` en `index.html`: cada foto es
 un `<img class="hero__slide">` (la primera lleva además la clase
 `is-active`), y agrega o quita imágenes ahí.

@@ -5,12 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lavandería Liz · Servicio profesional de lavado desde 1991</title>
   <meta name="description" content="Lavandería industrial y doméstica con 35 años de trayectoria. Lavado, planchado y logística textil confiable para familias, hoteles y empresas." />
+  <meta name="theme-color" content="#b3423d" />
+  <link rel="icon" href="imagenes/favicon.svg" type="image/svg+xml" />
+
+  <!-- Vista previa al compartir el enlace (WhatsApp, Facebook, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_PE" />
+  <meta property="og:title" content="Lavandería Liz · Servicio profesional de lavado desde 1991" />
+  <meta property="og:description" content="35 años de lavado, planchado y logística textil para hoteles, minería, hospitales, empresas y familias." />
+  <meta property="og:image" content="imagenes/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DryCleaningOrLaundry",
+    "name": "Lavandería Liz",
+    "foundingDate": "1991",
+    "description": "Lavandería industrial y doméstica: lavado, planchado y logística textil para empresas y familias.",
+    "image": "imagenes/og-image.jpg",
+    "openingHours": "Mo-Sa 08:00-19:00",
+    "award": "Premio Innova 2026 · ASPEM"
+  }
+  </script>
+
+  <link rel="preload" as="image" href="imagenes/Camion.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=JetBrains+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a href="#numeros" class="skip-link">Saltar al contenido</a>
 
   <!-- ===== NAV ===== -->
   <header class="nav" id="nav">
@@ -19,12 +45,13 @@
     </a>
     <nav class="nav__links" id="navLinks">
       <a href="#numeros">Resultados</a>
-      <a href="#industrias">Industrias</a>
+      <a href="#industrias">Servicios</a>
       <a href="#clientes">Clientes</a>
+      <a href="#premio">Premio</a>
       <a href="#historia">Trayectoria</a>
       <a href="#contacto" class="nav__cta">Solicitar cotización</a>
     </nav>
-    <button class="nav__burger" id="navBurger" aria-label="Abrir menú">
+    <button class="nav__burger" id="navBurger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
   </header>
@@ -33,13 +60,14 @@
   <section class="hero" id="inicio">
     <!-- Carrusel de fondo: la flota real de Lavandería Liz -->
     <div class="hero__carousel" id="heroCarousel" aria-hidden="true">
-      <img src="imagenes/Camion.png" alt="" class="hero__slide is-active" />
-      <img src="imagenes/Miniban.png" alt="" class="hero__slide" />
+      <img src="imagenes/Camion.jpg" alt="" class="hero__slide is-active" fetchpriority="high" />
+      <img src="imagenes/Miniban.jpg" alt="" class="hero__slide" />
     </div>
     <div class="hero__overlay" aria-hidden="true"></div>
 
     <div class="hero__grid">
       <div class="hero__content reveal">
+        <p class="hero__badge">Desde 1991 · Premio Innova 2026</p>
         <h1 class="hero__title">
           Cuidado profesional<br />
           de <span class="accent">cada prenda</span>.
@@ -50,7 +78,7 @@
           confían en nosotros para el cuidado diario de sus textiles.
         </p>
         <div class="hero__actions">
-          <a href="https://wa.me/000000000000" class="btn btn--primary" target="_blank" rel="noopener">Conversemos por WhatsApp</a>
+          <a href="https://wa.me/51956845005?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n" class="btn btn--primary" target="_blank" rel="noopener">Conversemos por WhatsApp</a>
           <a href="#historia" class="btn btn--ghost">Conoce nuestra historia →</a>
         </div>
       </div>
@@ -72,8 +100,8 @@
         <div class="stat__label">Años de experiencia</div>
       </div>
       <div class="stat reveal">
-        <div class="stat__num" data-target="500000" data-suffix="+">0</div>
-        <div class="stat__label">Kilos de ropa lavados</div>
+        <div class="stat__num" data-target="500" data-prefix="+" data-suffix="">0</div>
+        <div class="stat__label">Toneladas de ropa lavadas</div>
       </div>
       <div class="stat reveal">
         <div class="stat__num" data-target="12000" data-suffix="+">0</div>
@@ -110,178 +138,206 @@
     </div>
   </section>
 
-  <!-- ===== SOLUCIONES POR INDUSTRIA ===== -->
+  <!-- ===== SERVICIOS: EMPRESAS (B2B) Y HOGARES (B2C) ===== -->
   <section class="industrias" id="industrias">
     <div class="section-head reveal">
-      <h2>Industrias con las que trabajamos</h2>
-      <p class="industrias__intro">Cada sector tiene prioridades distintas. Ajustamos el proceso y el manejo a lo que cada rubro realmente necesita.</p>
+      <h2>Soluciones para empresas y hogares</h2>
+      <p class="industrias__intro">Un mismo estándar de calidad, adaptado a lo que cada cliente necesita.</p>
     </div>
 
-    <div class="ind-tabs reveal" role="tablist" aria-label="Industrias">
-      <button class="ind-tab is-active" type="button" role="tab" aria-selected="true" data-industry="hoteleria">Hotelería</button>
-      <button class="ind-tab" type="button" role="tab" aria-selected="false" data-industry="restaurantes">Restaurantes</button>
-      <button class="ind-tab" type="button" role="tab" aria-selected="false" data-industry="mineria">Minería</button>
-      <button class="ind-tab" type="button" role="tab" aria-selected="false" data-industry="construccion">Construcción</button>
-      <button class="ind-tab" type="button" role="tab" aria-selected="false" data-industry="hospitales">Hospitales</button>
-      <button class="ind-tab" type="button" role="tab" aria-selected="false" data-industry="corporativo">Corporativo</button>
-    </div>
 
-    <div class="ind-panels reveal">
+    <div class="ind reveal">
+        <div class="ind-tabs" role="tablist" aria-label="Industrias" aria-orientation="vertical">
+          <button class="ind-tab is-active" type="button" role="tab" aria-selected="true" id="tab-mineria" aria-controls="panel-mineria" data-industry="mineria">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 7v4M8.5 9v2.5M15.5 9v2.5"/></svg><span>Minería</span><i class="ind-tab__bar" aria-hidden="true"></i>
+          </button>
+          <button class="ind-tab" type="button" role="tab" aria-selected="false" id="tab-hoteleria" aria-controls="panel-hoteleria" data-industry="hoteleria">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19V9m0 6h18m0 4v-5a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="12" r="2"/></svg><span>Hotelería</span><i class="ind-tab__bar" aria-hidden="true"></i>
+          </button>
+          <button class="ind-tab" type="button" role="tab" aria-selected="false" id="tab-restaurantes" aria-controls="panel-restaurantes" data-industry="restaurantes">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v18M4 3v5a3 3 0 0 0 6 0V3M17 21V3c-2 1-3 4-3 8h3"/></svg><span>Restaurantes</span><i class="ind-tab__bar" aria-hidden="true"></i>
+          </button>
+          <button class="ind-tab" type="button" role="tab" aria-selected="false" id="tab-construccion" aria-controls="panel-construccion" data-industry="construccion">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M6 21V9l6-5 6 5v12M10 21v-5h4v5"/></svg><span>Construcción</span><i class="ind-tab__bar" aria-hidden="true"></i>
+          </button>
+          <button class="ind-tab" type="button" role="tab" aria-selected="false" id="tab-hospitales" aria-controls="panel-hospitales" data-industry="hospitales">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg><span>Hospitales</span><i class="ind-tab__bar" aria-hidden="true"></i>
+          </button>
+          <button class="ind-tab" type="button" role="tab" aria-selected="false" id="tab-corporativo" aria-controls="panel-corporativo" data-industry="corporativo">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3M3 13h18"/></svg><span>Corporativo</span><i class="ind-tab__bar" aria-hidden="true"></i>
+          </button>
+          <button class="ind-tab ind-tab--b2c" type="button" role="tab" aria-selected="false" id="tab-hogares" aria-controls="panel-hogares" data-industry="hogares">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7M5 10v10h14V10M10 20v-6h4v6"/></svg><span>Hogares</span><i class="ind-tab__bar" aria-hidden="true"></i>
+          </button>
+        </div>
 
-      <!-- HOTELERÍA -->
-      <div class="ind-panel is-active" data-panel="hoteleria" role="tabpanel">
-        <div class="ind-panel__grid">
-          <div class="ind-group">
-            <h3>Lavandería y textiles</h3>
-            <ul>
-              <li>Lavado de ropa de cama: sábanas, fundas, protectores de colchón</li>
-              <li>Lavado de toallas y batas</li>
-              <li>Lavado y planchado de mantelería y servilletas (restaurante, banquetes, eventos)</li>
-              <li>Lavado de uniformes del personal: housekeeping, cocina, recepción, seguridad</li>
-              <li>Lavado de cortinas y textiles decorativos</li>
-              <li>Planchado industrial (prensas, calandras) para acabado profesional</li>
-              <li>Tintorería para huéspedes: lavado en el día, entrega a la habitación</li>
-              <li>Costura y reparación menor de textiles</li>
-            </ul>
-          </div>
-          <div class="ind-group">
-            <h3>Limpieza (facility completo)</h3>
-            <ul>
-              <li>Limpieza de habitaciones: soporte a housekeeping en temporada alta</li>
-              <li>Limpieza de áreas comunes: lobby, pasillos, ascensores</li>
-              <li>Limpieza profunda de alfombras y tapicería</li>
-              <li>Limpieza de piscinas y áreas húmedas: spa, sauna</li>
-            </ul>
-          </div>
+        <div class="ind-panels">
+          <article class="ind-panel is-active" id="panel-mineria" data-panel="mineria" role="tabpanel" aria-labelledby="tab-mineria" tabindex="0">
+            <div class="ind-panel__main">
+              <div class="ind-panel__head">
+                <span class="ind-panel__icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 7v4M8.5 9v2.5M15.5 9v2.5"/></svg></span>
+                <div>
+                  <h3>Minería</h3>
+                  <p>Ropa de trabajo descontaminada y trazable.</p>
+                </div>
+              </div>
+              <span class="ind-panel__label">Lavandería</span>
+              <ul class="chips"><li>Overoles y ropa de trabajo</li><li>Descontaminación de EPP</li><li>Alta visibilidad</li><li>Trazabilidad por trabajador</li><li>Reparación de uniformes</li></ul>
+              <span class="ind-panel__label">Limpieza y facility</span>
+              <ul class="chips chips--soft"><li>Campamentos y comedores</li><li>Oficinas en mina</li><li>Residuos textiles</li></ul>
+              <a href="https://wa.me/51956845005?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n" class="ind-panel__cta" data-wa="Minería" target="_blank" rel="noopener">Cotizar para Minería →</a>
+            </div>
+            <aside class="ind-panel__clients" aria-label="Clientes de mineria">
+              <span class="ind-panel__label">Confían en nosotros</span>
+              <ul class="client-logos client-logos--n6">
+                <li><img src="imagenes/barrick.jpg" alt="Barrick" loading="lazy" decoding="async" /></li>
+                <li><img src="imagenes/nyrstar.png" alt="Nyrstar" loading="lazy" decoding="async" /></li>
+                <li><img src="imagenes/contonga.76ade7f5.png" alt="Contonga Minería" loading="lazy" decoding="async" /></li>
+                <li><img src="imagenes/logolincuna.png" alt="Compañía Minera Lincuna" loading="lazy" decoding="async" /></li>
+                <li><img src="imagenes/komatsu-mitsui.png" alt="Komatsu-Mitsui" class="logo--zoom" loading="lazy" decoding="async" /></li>
+                <li><img src="imagenes/confipetrol.jpeg" alt="Confipetrol" class="logo--zoom-sm" loading="lazy" decoding="async" /></li>
+              </ul>
+            </aside>
+          </article>
+          <article class="ind-panel" id="panel-hoteleria" data-panel="hoteleria" role="tabpanel" aria-labelledby="tab-hoteleria" tabindex="0" hidden>
+            <div class="ind-panel__main">
+              <div class="ind-panel__head">
+                <span class="ind-panel__icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19V9m0 6h18m0 4v-5a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="12" r="2"/></svg></span>
+                <div>
+                  <h3>Hotelería</h3>
+                  <p>Lencería impecable para cada check-in.</p>
+                </div>
+              </div>
+              <span class="ind-panel__label">Lavandería</span>
+              <ul class="chips"><li>Ropa de cama</li><li>Toallas y batas</li><li>Mantelería</li><li>Uniformes del personal</li><li>Cortinas</li><li>Tintorería para huéspedes</li></ul>
+              <span class="ind-panel__label">Limpieza y facility</span>
+              <ul class="chips chips--soft"><li>Habitaciones</li><li>Áreas comunes</li><li>Alfombras y tapicería</li></ul>
+              <a href="https://wa.me/51956845005?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n" class="ind-panel__cta" data-wa="Hotelería" target="_blank" rel="noopener">Cotizar para Hotelería →</a>
+            </div>
+            <aside class="ind-panel__clients" aria-label="Clientes de hoteleria">
+              <span class="ind-panel__label">Confían en nosotros</span>
+              <ul class="client-logos client-logos--n1">
+                <li><img src="imagenes/sodexo.png" alt="Sodexo" loading="lazy" decoding="async" /></li>
+              </ul>
+            </aside>
+          </article>
+          <article class="ind-panel" id="panel-restaurantes" data-panel="restaurantes" role="tabpanel" aria-labelledby="tab-restaurantes" tabindex="0" hidden>
+            <div class="ind-panel__main">
+              <div class="ind-panel__head">
+                <span class="ind-panel__icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v18M4 3v5a3 3 0 0 0 6 0V3M17 21V3c-2 1-3 4-3 8h3"/></svg></span>
+                <div>
+                  <h3>Restaurantes</h3>
+                  <p>Mantelería y uniformes listos antes de cada servicio.</p>
+                </div>
+              </div>
+              <span class="ind-panel__label">Lavandería</span>
+              <ul class="chips"><li>Mantelería</li><li>Uniformes de cocina y sala</li><li>Paños de cocina</li><li>Desengrasado especializado</li><li>Reposición urgente</li></ul>
+              <span class="ind-panel__label">Limpieza y facility</span>
+              <ul class="chips chips--soft"><li>Campanas extractoras</li><li>Pisos de alto tránsito</li><li>Desinfección sanitaria</li></ul>
+              <a href="https://wa.me/51956845005?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n" class="ind-panel__cta" data-wa="Restaurantes" target="_blank" rel="noopener">Cotizar para Restaurantes →</a>
+            </div>
+            <aside class="ind-panel__clients" aria-label="Clientes de restaurantes">
+              <span class="ind-panel__label">Confían en nosotros</span>
+              <ul class="client-logos client-logos--n1">
+                <li><img src="imagenes/sodexo.png" alt="Sodexo" loading="lazy" decoding="async" /></li>
+              </ul>
+            </aside>
+          </article>
+          <article class="ind-panel" id="panel-construccion" data-panel="construccion" role="tabpanel" aria-labelledby="tab-construccion" tabindex="0" hidden>
+            <div class="ind-panel__main">
+              <div class="ind-panel__head">
+                <span class="ind-panel__icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M6 21V9l6-5 6 5v12M10 21v-5h4v5"/></svg></span>
+                <div>
+                  <h3>Construcción</h3>
+                  <p>Uniformes de obra listos para cada turno.</p>
+                </div>
+              </div>
+              <span class="ind-panel__label">Lavandería</span>
+              <ul class="chips"><li>Uniformes de obra</li><li>EPP textil</li><li>Cemento, polvo y grasa</li><li>Dotación por proyecto</li></ul>
+              <span class="ind-panel__label">Limpieza y facility</span>
+              <ul class="chips chips--soft"><li>Oficinas de obra</li><li>Comedores y campamentos</li><li>Limpieza post-obra</li></ul>
+              <a href="https://wa.me/51956845005?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n" class="ind-panel__cta" data-wa="Construcción" target="_blank" rel="noopener">Cotizar para Construcción →</a>
+            </div>
+            <aside class="ind-panel__clients" aria-label="Clientes de construccion">
+              <span class="ind-panel__label">Confían en nosotros</span>
+              <ul class="client-logos client-logos--n2">
+                <li><img src="imagenes/cosapi.jpeg" alt="Cosapi" loading="lazy" decoding="async" /></li>
+                <li><img src="imagenes/skanska.jpeg" alt="Skanska" loading="lazy" decoding="async" /></li>
+              </ul>
+            </aside>
+          </article>
+          <article class="ind-panel" id="panel-hospitales" data-panel="hospitales" role="tabpanel" aria-labelledby="tab-hospitales" tabindex="0" hidden>
+            <div class="ind-panel__main">
+              <div class="ind-panel__head">
+                <span class="ind-panel__icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg></span>
+                <div>
+                  <h3>Hospitales</h3>
+                  <p>Textiles clínicos bajo protocolo de asepsia.</p>
+                </div>
+              </div>
+              <span class="ind-panel__label">Lavandería</span>
+              <ul class="chips"><li>Ropa de cama hospitalaria</li><li>Batas de paciente y personal</li><li>Textiles quirúrgicos</li><li>Ropa biocontaminada</li><li>Trazabilidad de lotes</li></ul>
+              <span class="ind-panel__label">Limpieza y facility</span>
+              <ul class="chips chips--soft"><li>Desinfección de áreas</li><li>Limpieza terminal</li><li>Residuos biocontaminados</li></ul>
+              <a href="https://wa.me/51956845005?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n" class="ind-panel__cta" data-wa="Hospitales" target="_blank" rel="noopener">Cotizar para Hospitales →</a>
+            </div>
+            <aside class="ind-panel__clients" aria-label="Clientes de hospitales">
+              <span class="ind-panel__label">Confían en nosotros</span>
+              <ul class="client-logos client-logos--n1">
+                <li><img src="imagenes/essalud-logo-png_seeklogo-205729.png" alt="EsSalud" loading="lazy" decoding="async" /></li>
+              </ul>
+            </aside>
+          </article>
+          <article class="ind-panel" id="panel-corporativo" data-panel="corporativo" role="tabpanel" aria-labelledby="tab-corporativo" tabindex="0" hidden>
+            <div class="ind-panel__main">
+              <div class="ind-panel__head">
+                <span class="ind-panel__icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3M3 13h18"/></svg></span>
+                <div>
+                  <h3>Corporativo</h3>
+                  <p>Uniformes y oficinas siempre presentables.</p>
+                </div>
+              </div>
+              <span class="ind-panel__label">Lavandería</span>
+              <ul class="chips"><li>Uniformes corporativos</li><li>Cortinas y tapicería</li><li>Textiles para eventos</li><li>Tintorería para colaboradores</li></ul>
+              <span class="ind-panel__label">Limpieza y facility</span>
+              <ul class="chips chips--soft"><li>Oficinas</li><li>Salas y auditorios</li><li>Alfombras y mobiliario</li></ul>
+              <a href="https://wa.me/51956845005?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n" class="ind-panel__cta" data-wa="Corporativo" target="_blank" rel="noopener">Cotizar para Corporativo →</a>
+            </div>
+            <aside class="ind-panel__clients" aria-label="Clientes de corporativo">
+              <span class="ind-panel__label">Confían en nosotros</span>
+              <ul class="client-logos client-logos--n3">
+                <li><img src="imagenes/Sedapall.jpg" alt="Sedapal" loading="lazy" decoding="async" /></li>
+                <li><img src="imagenes/fiscalia-nacion.jpeg" alt="Ministerio Público · Fiscalía de la Nación" loading="lazy" decoding="async" /></li>
+                <li><img src="imagenes/Colegio_mayor_coar_logo.397416b4.png" alt="COAR · Colegios de Alto Rendimiento" loading="lazy" decoding="async" /></li>
+              </ul>
+            </aside>
+          </article>
+          <article class="ind-panel" id="panel-hogares" data-panel="hogares" role="tabpanel" aria-labelledby="tab-hogares" tabindex="0" hidden>
+            <div class="ind-panel__main">
+              <div class="ind-panel__head">
+                <span class="ind-panel__icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7M5 10v10h14V10M10 20v-6h4v6"/></svg></span>
+                <div>
+                  <h3>Hogares</h3>
+                  <p>Tu ropa lista, sin salir de casa.</p>
+                </div>
+              </div>
+              <span class="ind-panel__label">Lavandería</span>
+              <ul class="chips"><li>Lavado por kilo</li><li>Edredones y frazadas</li><li>Planchado</li><li>Tintorería</li><li>Prendas delicadas</li></ul>
+              <span class="ind-panel__label">Servicio</span>
+              <ul class="chips chips--soft"><li>Recojo y entrega a domicilio</li><li>Lun a Sáb · 8:00 a 19:00</li></ul>
+              <a href="https://wa.me/51956845005?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n" class="ind-panel__cta" data-wa="hogar" target="_blank" rel="noopener">Pedir recojo por WhatsApp →</a>
+            </div>
+            <aside class="ind-panel__clients" aria-label="Cómo funciona el servicio a domicilio">
+              <span class="ind-panel__label">Cómo funciona</span>
+              <ol class="steps">
+                <li><b>1</b><span>Escríbenos por WhatsApp</span></li>
+                <li><b>2</b><span>Recogemos tu ropa en casa</span></li>
+                <li><b>3</b><span>Te la devolvemos limpia y doblada</span></li>
+              </ol>
+            </aside>
+          </article>
         </div>
       </div>
-
-      <!-- RESTAURANTES -->
-      <div class="ind-panel" data-panel="restaurantes" role="tabpanel" hidden>
-        <div class="ind-panel__grid">
-          <div class="ind-group">
-            <h3>Lavandería y textiles</h3>
-            <ul>
-              <li>Lavado y planchado de mantelería: manteles, cubremanteles, servilletas</li>
-              <li>Lavado de uniformes de cocina y sala: chaquetillas, delantales, gorros</li>
-              <li>Lavado de paños de cocina y trapos industriales, de alta frecuencia y desgaste</li>
-              <li>Desengrasado especializado para textiles con grasa y aceite quemado</li>
-              <li>Lavado de cortinas y textiles decorativos del salón</li>
-              <li>Planchado industrial para acabado de mantelería en eventos y banquetes</li>
-              <li>Reposición urgente ante roturas o manchas antes de servicio</li>
-            </ul>
-          </div>
-          <div class="ind-group">
-            <h3>Limpieza (facility completo)</h3>
-            <ul>
-              <li>Limpieza profunda de campanas extractoras y áreas de cocina</li>
-              <li>Limpieza de pisos y áreas de alto tránsito: salón, cocina</li>
-              <li>Desinfección de superficies según normativa sanitaria</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- MINERÍA -->
-      <div class="ind-panel" data-panel="mineria" role="tabpanel" hidden>
-        <div class="ind-panel__grid">
-          <div class="ind-group">
-            <h3>Lavandería industrial</h3>
-            <ul>
-              <li>Lavado de ropa de trabajo (overoles, camisetas) con separación por nivel de contaminación</li>
-              <li>Descontaminación de EPP: ropa expuesta a hidrocarburos, químicos, polvo mineral</li>
-              <li>Lavado de prendas de alta visibilidad: drill de seguridad, chalecos reflectivos</li>
-              <li>Manejo especializado de ropa contaminada con metales pesados o sustancias peligrosas, sin mezcla con lavado común</li>
-              <li>Impermeabilización y reencerado de prendas de protección climática</li>
-              <li>Reparación y remiendo de uniformes por alta rotura de uso</li>
-              <li>Control de trazabilidad de prendas por trabajador (RFID o códigos)</li>
-            </ul>
-          </div>
-          <div class="ind-group">
-            <h3>Servicios complementarios de facility</h3>
-            <ul>
-              <li>Limpieza de campamentos y comedores</li>
-              <li>Limpieza de oficinas administrativas en mina o campamento</li>
-              <li>Gestión de residuos textiles contaminados según normativa ambiental</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- CONSTRUCCIÓN -->
-      <div class="ind-panel" data-panel="construccion" role="tabpanel" hidden>
-        <div class="ind-panel__grid">
-          <div class="ind-group">
-            <h3>Lavandería y textiles</h3>
-            <ul>
-              <li>Lavado de uniformes y ropa de trabajo de obra: ingeniería, supervisión, cuadrillas</li>
-              <li>Lavado de prendas de alta visibilidad y EPP textil: chalecos, arneses, bandas reflectivas</li>
-              <li>Lavado de prendas con suciedad de obra: cemento, polvo, grasa de maquinaria</li>
-              <li>Reparación y remiendo de uniformes por desgaste de obra</li>
-              <li>Gestión de dotación de uniformes por proyecto o frente de obra</li>
-            </ul>
-          </div>
-          <div class="ind-group">
-            <h3>Limpieza (facility completo)</h3>
-            <ul>
-              <li>Limpieza de oficinas de obra y contenedores administrativos</li>
-              <li>Limpieza de comedores y campamentos de obra</li>
-              <li>Limpieza post-obra de áreas entregadas</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- HOSPITALES -->
-      <div class="ind-panel" data-panel="hospitales" role="tabpanel" hidden>
-        <div class="ind-panel__grid">
-          <div class="ind-group">
-            <h3>Lavandería y textiles</h3>
-            <ul>
-              <li>Lavado hospitalario de ropa de cama: sábanas, fundas, cobertores</li>
-              <li>Lavado de batas de paciente y personal médico</li>
-              <li>Lavado de textiles quirúrgicos: campos, compresas reutilizables</li>
-              <li>Separación y desinfección de ropa contaminada o biocontaminada</li>
-              <li>Esterilización térmica o química según protocolo clínico</li>
-              <li>Planchado y doblado bajo estándares de asepsia</li>
-              <li>Trazabilidad de lotes para auditorías sanitarias</li>
-            </ul>
-          </div>
-          <div class="ind-group">
-            <h3>Limpieza (facility completo)</h3>
-            <ul>
-              <li>Limpieza y desinfección de áreas comunes y salas de espera</li>
-              <li>Limpieza terminal de habitaciones y quirófanos</li>
-              <li>Manejo de residuos biocontaminados según normativa de salud</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- CORPORATIVO -->
-      <div class="ind-panel" data-panel="corporativo" role="tabpanel" hidden>
-        <div class="ind-panel__grid">
-          <div class="ind-group">
-            <h3>Lavandería y textiles</h3>
-            <ul>
-              <li>Lavado de uniformes corporativos: recepción, seguridad, mantenimiento</li>
-              <li>Lavado de cortinas, alfombras textiles y tapicería de oficina</li>
-              <li>Lavado de manteles y textiles para eventos corporativos</li>
-              <li>Tintorería para colaboradores mediante convenio empresarial</li>
-            </ul>
-          </div>
-          <div class="ind-group">
-            <h3>Limpieza (facility completo)</h3>
-            <ul>
-              <li>Limpieza de oficinas y áreas comunes</li>
-              <li>Limpieza de salas de reuniones y auditorios</li>
-              <li>Limpieza profunda de alfombras y mobiliario</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
   </section>
 
   <!-- ===== CLIENTES ===== -->
@@ -292,55 +348,55 @@
 
     <div class="logos reveal">
       <div class="logo-chip">
-        <img src="imagenes/Sedapall.jpg" alt="Sedapal" />
+        <img src="imagenes/Sedapall.jpg" alt="Sedapal" loading="lazy" decoding="async" />
         <span class="tag tag--blue">Agua potable</span>
       </div>
       <div class="logo-chip">
-        <img src="imagenes/essalud-logo-png_seeklogo-205729.png" alt="EsSalud" />
+        <img src="imagenes/essalud-logo-png_seeklogo-205729.png" alt="EsSalud" loading="lazy" decoding="async" />
         <span class="tag tag--green">Salud</span>
       </div>
       <div class="logo-chip">
-        <img src="imagenes/Colegio_mayor_coar_logo.397416b4.png" alt="COAR · Colegios de Alto Rendimiento" />
+        <img src="imagenes/Colegio_mayor_coar_logo.397416b4.png" alt="COAR · Colegios de Alto Rendimiento" loading="lazy" decoding="async" />
         <span class="tag tag--yellow">Educación</span>
       </div>
       <div class="logo-chip">
-        <img src="imagenes/contonga.76ade7f5.png" alt="Contonga Minería" />
+        <img src="imagenes/contonga.76ade7f5.png" alt="Contonga Minería" loading="lazy" decoding="async" />
         <span class="tag tag--red">Minería</span>
       </div>
       <div class="logo-chip">
-        <img src="imagenes/logolincuna.png" alt="Compañía Minera Lincuna" />
+        <img src="imagenes/logolincuna.png" alt="Compañía Minera Lincuna" loading="lazy" decoding="async" />
         <span class="tag tag--red">Minería</span>
       </div>
       <div class="logo-chip">
-        <img src="imagenes/barrick.jpg" alt="Barrick" />
+        <img src="imagenes/barrick.jpg" alt="Barrick" loading="lazy" decoding="async" />
         <span class="tag tag--red">Minería</span>
       </div>
       <div class="logo-chip">
-        <img src="imagenes/nyrstar.png" alt="Nyrstar" />
+        <img src="imagenes/nyrstar.png" alt="Nyrstar" loading="lazy" decoding="async" />
         <span class="tag tag--red">Minería</span>
       </div>
       <div class="logo-chip">
-        <img src="imagenes/komatsu-mitsui.png" alt="Komatsu-Mitsui" />
+        <img src="imagenes/komatsu-mitsui.png" alt="Komatsu-Mitsui" class="logo--zoom" loading="lazy" decoding="async" />
         <span class="tag tag--red">Minería</span>
       </div>
       <div class="logo-chip">
-        <img src="imagenes/confipetrol.jpeg" alt="Confipetrol" />
+        <img src="imagenes/confipetrol.jpeg" alt="Confipetrol" class="logo--zoom-sm" loading="lazy" decoding="async" />
         <span class="tag tag--yellow">Energía</span>
       </div>
       <div class="logo-chip">
-        <img src="imagenes/cosapi.jpeg" alt="Cosapi" />
+        <img src="imagenes/cosapi.jpeg" alt="Cosapi" loading="lazy" decoding="async" />
         <span class="tag tag--blue">Construcción</span>
       </div>
       <div class="logo-chip">
-        <img src="imagenes/skanska.jpeg" alt="Skanska" />
+        <img src="imagenes/skanska.jpeg" alt="Skanska" loading="lazy" decoding="async" />
         <span class="tag tag--blue">Construcción</span>
       </div>
       <div class="logo-chip">
-        <img src="imagenes/fiscalia-nacion.jpeg" alt="Ministerio Público · Fiscalía de la Nación" />
+        <img src="imagenes/fiscalia-nacion.jpeg" alt="Ministerio Público · Fiscalía de la Nación" loading="lazy" decoding="async" />
         <span class="tag tag--green">Gobierno</span>
       </div>
       <div class="logo-chip">
-        <img src="imagenes/sodexo.png" alt="Sodexo" />
+        <img src="imagenes/sodexo.png" alt="Sodexo" loading="lazy" decoding="async" />
         <span class="tag tag--yellow">Facilities</span>
       </div>
     </div>
@@ -368,8 +424,8 @@
       <p class="premio__intro">Reconocidos por ASPEM (Asociación Peruana de Empresarios) por la innovación en nuestro servicio.</p>
     </div>
     <div class="premio__gallery reveal">
-      <img src="imagenes/premio-innova-2026.jpg" alt="Entrega del Premio Innova 2026 a Lavandería Liz, por ASPEM" class="premio__img" />
-      <img src="imagenes/premio-innova-2026-2.jpg" alt="Representantes de Lavandería Liz en la ceremonia del Premio Innova 2026" class="premio__img" />
+      <img src="imagenes/premio-innova-2026.jpg" alt="Entrega del Premio Innova 2026 a Lavandería Liz, por ASPEM" loading="lazy" decoding="async" class="premio__img" />
+      <img src="imagenes/premio-innova-2026-2.jpg" alt="Representantes de Lavandería Liz en la ceremonia del Premio Innova 2026" loading="lazy" decoding="async" class="premio__img" />
     </div>
   </section>
 
@@ -385,7 +441,7 @@
       <!-- 1991 -->
       <li class="hito hito--1 reveal">
         <div class="hito__media">
-          <img src="imagenes/1991.jpg" alt="Lavandería Liz en 1991" />
+          <img src="imagenes/1991.jpg" alt="Lavandería Liz en 1991" loading="lazy" decoding="async" />
         </div>
         <div class="hito__text">
           <span class="hito__year">1991</span>
@@ -448,10 +504,10 @@
       <h2>¿Listo para trabajar con nosotros?</h2>
       <p>Escríbenos y recibe tu cotización hoy mismo. Atención rápida y directa.</p>
       <div class="cta__actions">
-        <a href="https://wa.me/000000000000" class="btn btn--primary" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-        <a href="tel:+000000000000" class="btn btn--ghost">Llamar ahora</a>
+        <a href="https://wa.me/51956845005?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n" class="btn btn--primary" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a href="tel:+51956845005" class="btn btn--ghost">Llamar ahora</a>
       </div>
-      <p class="cta__note">Lun a Sáb · 8:00 a 19:00 · Recogida a domicilio disponible</p>
+      <p class="cta__note">WhatsApp y llamadas: <a href="tel:+51956845005">956 845 005</a> · Lun a Sáb · 8:00 a 19:00 · Recogida a domicilio disponible</p>
     </div>
   </section>
 
@@ -459,21 +515,21 @@
   <footer class="footer">
     <div class="footer__grid">
       <div class="footer__col footer__col--brand">
-        <img src="imagenes/logo.png" alt="Lavandería Liz" class="footer__logo" />
+        <img src="imagenes/logo.png" alt="Lavandería Liz" loading="lazy" decoding="async" class="footer__logo" />
         <p>Lavandería industrial y doméstica con 35 años de trayectoria. Desde 1991.</p>
       </div>
       <div class="footer__col">
         <span class="footer__label">Navegación</span>
         <a href="#numeros">Resultados</a>
-        <a href="#industrias">Industrias</a>
+        <a href="#industrias">Servicios</a>
         <a href="#clientes">Clientes</a>
         <a href="#premio">Premio Innova 2026</a>
         <a href="#historia">Trayectoria</a>
       </div>
       <div class="footer__col">
         <span class="footer__label">Contacto</span>
-        <a href="https://wa.me/000000000000" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="tel:+000000000000">Llamar</a>
+        <a href="https://wa.me/51956845005?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="tel:+51956845005">Llamar</a>
         <a href="#contacto">Solicitar cotización</a>
       </div>
     </div>
@@ -481,6 +537,11 @@
       <small>© <span id="year"></span> Lavandería Liz. Todos los derechos reservados.</small>
     </div>
   </footer>
+
+  <!-- Botón flotante de WhatsApp (mismo número que en Contacto) -->
+  <a href="https://wa.me/51956845005?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n" class="wa-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8C29 8.7 23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.2-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5 9.9 9.9 5.2 16 5.2s11 4.7 11 10.6-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1.1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 2-.8 2.2-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.3z"/></svg>
+  </a>
 
   <script src="script.js"></script>
 </body>
